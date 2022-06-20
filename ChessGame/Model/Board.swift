@@ -8,7 +8,7 @@
 import Foundation
 
 class Board {
-    var pieces: [[Piece?]] = Array(repeating: Array(repeating: nil, count: 8), count: 8)
+    var pieces: [[Pieceable?]] = Array(repeating: Array(repeating: nil, count: 8), count: 8)
     
     init() {
         reset()
@@ -22,7 +22,7 @@ class Board {
     func reset(team: Team) {
         PieceType.allCases.forEach { type in 
             type.initialPosition(team: team).forEach { point in
-                pieces[point.x][point.y] = Pawn(type: type, team: team) 
+                pieces[point.x][point.y] = Piece(type: type, team: team) 
             }
         }
     }

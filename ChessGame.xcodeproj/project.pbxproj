@@ -18,10 +18,8 @@
 		C238563228605510000F182B /* ChessGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238563128605510000F182B /* ChessGameUITestsLaunchTests.swift */; };
 		C238563F286055A5000F182B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238563E286055A5000F182B /* Board.swift */; };
 		C2385640286055A5000F182B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238563E286055A5000F182B /* Board.swift */; };
-		C2385643286055E1000F182B /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2385642286055E1000F182B /* Pawn.swift */; };
-		C2385644286055E1000F182B /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2385642286055E1000F182B /* Pawn.swift */; };
-		C238564728608FA0000F182B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238564628608FA0000F182B /* Piece.swift */; };
-		C238564828608FA0000F182B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238564628608FA0000F182B /* Piece.swift */; };
+		C2385643286055E1000F182B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2385642286055E1000F182B /* Piece.swift */; };
+		C2385644286055E1000F182B /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2385642286055E1000F182B /* Piece.swift */; };
 		C238564F28609A82000F182B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238564E28609A82000F182B /* GameManager.swift */; };
 		C238565028609A82000F182B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238564E28609A82000F182B /* GameManager.swift */; };
 		C23856522860AA93000F182B /* PieceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23856512860AA93000F182B /* PieceType.swift */; };
@@ -66,8 +64,7 @@
 		C238562F28605510000F182B /* ChessGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGameUITests.swift; sourceTree = "<group>"; };
 		C238563128605510000F182B /* ChessGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C238563E286055A5000F182B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		C2385642286055E1000F182B /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
-		C238564628608FA0000F182B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		C2385642286055E1000F182B /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		C238564E28609A82000F182B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C23856512860AA93000F182B /* PieceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceType.swift; sourceTree = "<group>"; };
 		C23856542860AEE0000F182B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -168,8 +165,7 @@
 		C238564A28609125000F182B /* Piece */ = {
 			isa = PBXGroup;
 			children = (
-				C238564628608FA0000F182B /* Piece.swift */,
-				C2385642286055E1000F182B /* Pawn.swift */,
+				C2385642286055E1000F182B /* Piece.swift */,
 				C23856512860AA93000F182B /* PieceType.swift */,
 			);
 			path = Piece;
@@ -311,11 +307,10 @@
 				C238560F2860550E000F182B /* AppDelegate.swift in Sources */,
 				C23856582860AEF3000F182B /* Direction.swift in Sources */,
 				C23856522860AA93000F182B /* PieceType.swift in Sources */,
-				C238564728608FA0000F182B /* Piece.swift in Sources */,
 				C238564F28609A82000F182B /* GameManager.swift in Sources */,
 				C238565B2860AF19000F182B /* Point.swift in Sources */,
 				C238563F286055A5000F182B /* Board.swift in Sources */,
-				C2385643286055E1000F182B /* Pawn.swift in Sources */,
+				C2385643286055E1000F182B /* Piece.swift in Sources */,
 				C23856112860550E000F182B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,11 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C238564828608FA0000F182B /* Piece.swift in Sources */,
 				C2385640286055A5000F182B /* Board.swift in Sources */,
 				C23856562860AEE0000F182B /* Team.swift in Sources */,
 				C23856592860AEF3000F182B /* Direction.swift in Sources */,
-				C2385644286055E1000F182B /* Pawn.swift in Sources */,
+				C2385644286055E1000F182B /* Piece.swift in Sources */,
 				C238565C2860AF19000F182B /* Point.swift in Sources */,
 				C238562628605510000F182B /* ChessGameTests.swift in Sources */,
 				C23856532860AA93000F182B /* PieceType.swift in Sources */,
