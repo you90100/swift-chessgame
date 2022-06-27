@@ -27,10 +27,6 @@ struct King: Pieceable {
         self.team = team
     }
     
-    func movablePositions(from: Position) -> [Position] {
-        return []
-    }
-    
     static func initialPosition(team: Team, index: Int) -> Position {
         switch team {
         case .black:
@@ -40,16 +36,8 @@ struct King: Pieceable {
         }
     }
     
-    /*func canMove(to: Position) -> Bool {
-        guard to.x >= 0 && to.x < 8, to.y >= 0, to.y < 8 else { return false  }
-        guard self.point != to else { return false }
-        
-        if abs(self.point.x - to.x) > 1 {
-            return false
-        } else if abs(self.point.y - to.y) > 1 {
-            return false
-        }
-        
-        return true
-    }*/
+    /// TODO: 
+    func movablePositions(from: Position) -> [Position] {
+        return []
+    }
 }

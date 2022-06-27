@@ -34,11 +34,15 @@ struct Pawn: Pieceable {
         case .black:
             var to = from
             to.file += 1
-            positions.append(to)
+            if isInBoundary(position: to) {
+                positions.append(to)
+            }
         case .white:
             var to = from
             to.file -= 1
-            positions.append(to)
+            if isInBoundary(position: to) {
+                positions.append(to)
+            }
         }
         
         return positions

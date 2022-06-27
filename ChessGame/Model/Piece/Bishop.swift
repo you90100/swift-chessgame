@@ -27,10 +27,6 @@ struct Bishop: Pieceable {
         self.team = team
     }    
     
-    func movablePositions(from: Position) -> [Position] {
-        return []
-    }
-    
     static func initialPosition(team: Team, index: Int) -> Position {
         switch team {
         case .black:
@@ -38,5 +34,10 @@ struct Bishop: Pieceable {
         case.white:
             return index == 0 ? Position(rank: 2, file: 7) : Position(rank: 5, file: 7)
         }
+    }
+    
+    /// TODO: 
+    func movablePositions(from: Position) -> [Position] {
+        return []
     }
 }

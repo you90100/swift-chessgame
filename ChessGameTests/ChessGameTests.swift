@@ -51,5 +51,4 @@ class ChessGameTests: XCTestCase {
             XCTAssertEqual($0.element?.shape, result7Shapes[$0.offset])
         }
     }
-
 }

@@ -43,6 +43,7 @@
 		C2E2318A28699D190046A6DB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2318928699D190046A6DB /* Player.swift */; };
 		C2E2318B28699D190046A6DB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2318928699D190046A6DB /* Player.swift */; };
 		C2E2318F2869E1A70046A6DB /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E2318E2869E1A70046A6DB /* BoardCollectionViewCell.swift */; };
+		C2E23191286A07340046A6DB /* PieceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E23190286A07340046A6DB /* PieceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		C2E2318628698BAB0046A6DB /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		C2E2318928699D190046A6DB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C2E2318E2869E1A70046A6DB /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		C2E23190286A07340046A6DB /* PieceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C238562528605510000F182B /* ChessGameTests.swift */,
+				C2E23190286A07340046A6DB /* PieceTests.swift */,
 			);
 			path = ChessGameTests;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C2E2318828698BAB0046A6DB /* King.swift in Sources */,
 				C238565C2860AF19000F182B /* Position.swift in Sources */,
 				C238562628605510000F182B /* ChessGameTests.swift in Sources */,
+				C2E23191286A07340046A6DB /* PieceTests.swift in Sources */,
 				C2E2317C28698B350046A6DB /* Bishop.swift in Sources */,
 				C2E2317B28698B320046A6DB /* Pieceable.swift in Sources */,
 				C2E2317F28698B500046A6DB /* Knight.swift in Sources */,

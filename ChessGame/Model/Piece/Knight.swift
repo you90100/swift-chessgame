@@ -27,10 +27,6 @@ struct Knight: Pieceable {
         self.team = team
     }  
     
-    func movablePositions(from: Position) -> [Position] {
-        return []
-    }
-    
     static func initialPosition(team: Team, index: Int) -> Position {
         switch team {
         case .black:
@@ -38,5 +34,10 @@ struct Knight: Pieceable {
         case.white:
             return index == 0 ? Position(rank: 1, file: 7) : Position(rank: 6, file: 7)
         }
+    }
+    
+    /// TODO: 
+    func movablePositions(from: Position) -> [Position] {
+        return []
     }
 }
