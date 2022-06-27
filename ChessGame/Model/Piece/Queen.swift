@@ -34,4 +34,8 @@ struct Queen: Pieceable {
             self.position = Position(rank: 4, file: 7)
         }
     }  
+    
+    func movablePositions(from: Position) -> [Position] {
+        return []
+    }
 }

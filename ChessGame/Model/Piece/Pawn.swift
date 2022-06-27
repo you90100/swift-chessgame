@@ -34,4 +34,22 @@ struct Pawn: Pieceable {
             self.position = Position(rank: index, file: 6)
         }
     }
+    
+    func movablePositions(from: Position) -> [Position] {
+        var positions: [Position] = []
+        
+        switch team {
+        case .black:
+            var to = from
+            to.file += 1
+            positions.append(to)
+        case .white:
+            var to = from
+            to.file -= 1
+            positions.append(to)
+        }
+        
+        return positions
+    }
+
 }

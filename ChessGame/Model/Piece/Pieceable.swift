@@ -15,5 +15,7 @@ protocol Pieceable {
     var shape: String { get }
     var position: Position { get set }
     
+    func movablePositions(from: Position) -> [Position]
+    
     init(team: Team, index: Int)
 }

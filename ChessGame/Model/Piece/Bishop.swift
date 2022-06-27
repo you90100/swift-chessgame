@@ -34,4 +34,8 @@ struct Bishop: Pieceable {
             self.position = index == 0 ? Position(rank: 2, file: 7) : Position(rank: 5, file: 7)
         }
     }    
+    
+    func movablePositions(from: Position) -> [Position] {
+        return []
+    }
 }

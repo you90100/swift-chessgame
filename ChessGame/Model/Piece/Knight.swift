@@ -34,4 +34,8 @@ struct Knight: Pieceable {
             self.position = index == 0 ? Position(rank: 1, file: 7) : Position(rank: 6, file: 7)
         }
     }  
+    
+    func movablePositions(from: Position) -> [Position] {
+        return []
+    }
 }
