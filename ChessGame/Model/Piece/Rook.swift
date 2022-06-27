@@ -22,16 +22,16 @@ struct Rook: Pieceable {
     }    
     
     var team: Team    
-    var point: Point
+    var position: Position
     
     init(team: Team, index: Int) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = index == 0 ? Point(x: 0, y: 0) : Point(x: 7, y: 0) 
+            self.position = index == 0 ? Position(rank: 0, file: 0) : Position(rank: 7, file: 0) 
         case.white:
-            self.point = index == 0 ? Point(x: 7, y: 7) : Point(x: 0, y: 7)
+            self.position = index == 0 ? Position(rank: 7, file: 7) : Position(rank: 0, file: 7)
         }
     }  
 }

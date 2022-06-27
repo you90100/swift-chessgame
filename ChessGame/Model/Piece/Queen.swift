@@ -22,16 +22,16 @@ struct Queen: Pieceable {
     }    
     
     var team: Team
-    var point: Point    
+    var position: Position    
     
     init(team: Team, index: Int = 0) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = Point(x: 5, y: 0) 
+            self.position = Position(rank: 4, file: 0) 
         case.white:
-            self.point = Point(x: 5, y: 7)
+            self.position = Position(rank: 4, file: 7)
         }
     }  
 }

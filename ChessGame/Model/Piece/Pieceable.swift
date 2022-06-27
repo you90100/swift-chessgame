@@ -13,7 +13,7 @@ protocol Pieceable {
     var team: Team { get set }
     var score: Int { get }
     var shape: String { get }
-    var point: Point { get set }
+    var position: Position { get set }
     
     init(team: Team, index: Int)
 }

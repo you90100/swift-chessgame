@@ -22,16 +22,16 @@ struct Knight: Pieceable {
     }    
     
     var team: Team    
-    var point: Point
+    var position: Position
     
     init(team: Team, index: Int) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = index == 0 ? Point(x: 2, y: 0) : Point(x: 6, y: 0) 
+            self.position = index == 0 ? Position(rank: 1, file: 0) : Position(rank: 6, file: 0) 
         case.white:
-            self.point = index == 0 ? Point(x: 2, y: 7) : Point(x: 6, y: 7)
+            self.position = index == 0 ? Position(rank: 1, file: 7) : Position(rank: 6, file: 7)
         }
     }  
 }

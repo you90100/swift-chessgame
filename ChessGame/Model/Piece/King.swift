@@ -22,29 +22,16 @@ struct King: Pieceable {
     }    
     
     var team: Team    
-    var point: Point
+    var position: Position
     
     init(team: Team, index: Int = 0) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = Point(x: 3, y: 0)
+            self.position = Position(rank: 3, file: 0)
         case.white:
-            self.point = Point(x: 3, y: 7)
+            self.position = Position(rank: 3, file: 7)
         }
-    }
-    
-    func canMove(to: Point) -> Bool {
-        guard to.x >= 0 && to.x < 8, to.y >= 0, to.y < 8 else { return false  }
-        guard self.point != to else { return false }
-        
-        if abs(self.point.x - to.x) > 1 {
-            return false
-        } else if abs(self.point.y - to.y) > 1 {
-            return false
-        }
-        
-        return true
     }
 }

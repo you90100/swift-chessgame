@@ -22,17 +22,16 @@ struct Pawn: Pieceable {
     }    
     
     var team: Team    
-    var point: Point
+    var position: Position
     
     init(team: Team, index: Int) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = Point(x: 1, y: index)
+            self.position = Position(rank: index, file: 1)
         case.white:
-            self.point = Point(x: 7, y: index)
+            self.position = Position(rank: index, file: 6)
         }
     }
-
 }

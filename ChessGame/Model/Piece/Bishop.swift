@@ -15,23 +15,23 @@ struct Bishop: Pieceable {
     var shape: String {
         switch team {
         case .black:
-            return "♜"
+            return "♝"
         case .white:
-            return "♖"
+            return "♗"
         }
     }    
     
     var team: Team
-    var point: Point
+    var position: Position
 
     init(team: Team, index: Int) {
         self.team = team
         
         switch team {
         case .black:
-            self.point = index == 0 ? Point(x: 2, y: 0) : Point(x: 5, y: 0) 
+            self.position = index == 0 ? Position(rank: 2, file: 0) : Position(rank: 5, file: 0) 
         case.white:
-            self.point = index == 0 ? Point(x: 2, y: 7) : Point(x: 5, y: 7)
+            self.position = index == 0 ? Position(rank: 2, file: 7) : Position(rank: 5, file: 7)
         }
     }    
 }

@@ -20,11 +20,15 @@ class Board {
     }
     
     func reset(team: Team) {
-        PieceType.allCases.forEach { type in 
-            type.initialPosition(team: team).forEach { point in
-                pieces[point.x][point.y] = Piece(type: type, team: team) 
+        let pieceTypes: [Pieceable.Type] = [Rook.self, Knight.self, Bishop.self, King.self, Queen.self, Pawn.self]
+        
+        pieceTypes
+            .flatMap { type in
+                (0..<type.maxCount).map { type.init(team: team, index: $0) }
+            }.forEach { piece in
+                pieces[piece.position.file][piece.position.rank] = piece
             }
-        }
+        
     }
     
     func move() {

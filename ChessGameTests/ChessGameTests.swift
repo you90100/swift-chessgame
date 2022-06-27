@@ -18,33 +18,38 @@ class ChessGameTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testPawn_initaliPosition() throws {
+    func testBlack_initialPosition() throws {
         let board = Board()
-        board.reset()
+        let section0 = board.pieces[0]
+        let section1 = board.pieces[1]
         
-        let row1 = board.pieces[1]
-        let row7 = board.pieces[7]
+        let result0Shapes = ["♜", "♞", "♝", ".", "♛", "♝", "♞", "♜"]
+        let result1Shapes = ["♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"]
         
-        row1.forEach { piece in
-            XCTAssertEqual(piece?.team, .black)
-            XCTAssertEqual(piece?.type, .pawn)
+        section0.enumerated().forEach { 
+            XCTAssertEqual($0.element?.shape, result0Shapes[$0.offset])
         }
         
-        row7.forEach { piece in
-            XCTAssertEqual(piece?.team, .white)
-            XCTAssertEqual(piece?.type, .pawn)
+        section1.enumerated().forEach { 
+            XCTAssertEqual($0.element?.shape, result1Shapes[$0.offset])
         }
     }
     
-    func testPawn_limitNumber() throws {
+    func testWhite_initialPosition() throws {
         let board = Board()
-        board.reset()
+        let section6 = board.pieces[0]
+        let section7 = board.pieces[1]
         
-        let pawnCount = board.pieces
-            .flatMap { $0 }
-            .filter { $0?.type == .pawn }
-            .count
+        let result0Shapes = ["♖", "♘", "♗", ".", "♕", "♗", "♘", "♖"]
+        let result1Shapes = ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"]
         
-        XCTAssertEqual(PieceType.pawn.limit, pawnCount / 2)
+        section6.enumerated().forEach { 
+            XCTAssertEqual($0.element?.shape, result0Shapes[$0.offset])
+        }
+        
+        section7.enumerated().forEach { 
+            XCTAssertEqual($0.element?.shape, result1Shapes[$0.offset])
+        }
     }
+
 }
