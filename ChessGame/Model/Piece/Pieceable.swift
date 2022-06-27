@@ -9,13 +9,11 @@ import Foundation
 
 protocol Pieceable {
     static var maxCount: Int { get }
-    
     var team: Team { get set }
     var score: Int { get }
     var shape: String { get }
-    var position: Position { get set }
     
+    init(team: Team)
+    static func initialPosition(team: Team, index: Int) -> Position
     func movablePositions(from: Position) -> [Position]
-    
-    init(team: Team, index: Int)
 }

@@ -21,21 +21,22 @@ struct Queen: Pieceable {
         }
     }    
     
-    var team: Team
-    var position: Position    
+    var team: Team    
     
-    init(team: Team, index: Int = 0) {
+    init(team: Team) {
         self.team = team
-        
-        switch team {
-        case .black:
-            self.position = Position(rank: 4, file: 0) 
-        case.white:
-            self.position = Position(rank: 4, file: 7)
-        }
     }  
     
     func movablePositions(from: Position) -> [Position] {
         return []
+    }
+    
+    static func initialPosition(team: Team, index: Int) -> Position {
+        switch team {
+        case .black:
+            return Position(rank: 4, file: 0) 
+        case.white:
+            return Position(rank: 4, file: 7)
+        }
     }
 }

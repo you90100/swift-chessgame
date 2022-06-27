@@ -37,18 +37,18 @@ class ChessGameTests: XCTestCase {
     
     func testWhite_initialPosition() throws {
         let board = Board()
-        let section6 = board.pieces[0]
-        let section7 = board.pieces[1]
+        let section6 = board.pieces[6]
+        let section7 = board.pieces[7]
         
-        let result0Shapes = ["♖", "♘", "♗", ".", "♕", "♗", "♘", "♖"]
-        let result1Shapes = ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"]
+        let result6Shapes = ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"]
+        let result7Shapes = ["♖", "♘", "♗", ".", "♕", "♗", "♘", "♖"]
         
         section6.enumerated().forEach { 
-            XCTAssertEqual($0.element?.shape, result0Shapes[$0.offset])
+            XCTAssertEqual($0.element?.shape, result6Shapes[$0.offset])
         }
         
         section7.enumerated().forEach { 
-            XCTAssertEqual($0.element?.shape, result1Shapes[$0.offset])
+            XCTAssertEqual($0.element?.shape, result7Shapes[$0.offset])
         }
     }
 

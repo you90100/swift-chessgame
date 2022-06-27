@@ -22,21 +22,34 @@ struct King: Pieceable {
     }    
     
     var team: Team    
-    var position: Position
     
-    init(team: Team, index: Int = 0) {
+    init(team: Team) {
         self.team = team
-        
-        switch team {
-        case .black:
-            self.position = Position(rank: 3, file: 0)
-        case.white:
-            self.position = Position(rank: 3, file: 7)
-        }
     }
     
     func movablePositions(from: Position) -> [Position] {
         return []
     }
     
+    static func initialPosition(team: Team, index: Int) -> Position {
+        switch team {
+        case .black:
+            return Position(rank: 3, file: 0)
+        case.white:
+            return Position(rank: 3, file: 7)
+        }
+    }
+    
+    /*func canMove(to: Position) -> Bool {
+        guard to.x >= 0 && to.x < 8, to.y >= 0, to.y < 8 else { return false  }
+        guard self.point != to else { return false }
+        
+        if abs(self.point.x - to.x) > 1 {
+            return false
+        } else if abs(self.point.y - to.y) > 1 {
+            return false
+        }
+        
+        return true
+    }*/
 }

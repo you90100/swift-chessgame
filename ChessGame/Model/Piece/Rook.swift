@@ -8,7 +8,7 @@
 import Foundation
 
 struct Rook: Pieceable {
-    static let maxCount: Int = 2
+    static let maxCount: Int = 2    
     
     let score: Int = 5
 
@@ -21,17 +21,22 @@ struct Rook: Pieceable {
         }
     }    
     
-    var team: Team    
-    var position: Position
+    var team: Team
     
-    init(team: Team, index: Int) {
+    init(team: Team) {
         self.team = team
-        
+    }  
+    
+    static func initialPosition(team: Team, index: Int) -> Position {
         switch team {
         case .black:
-            self.position = index == 0 ? Position(rank: 0, file: 0) : Position(rank: 7, file: 0) 
+            return index == 0 ? Position(rank: 0, file: 0) : Position(rank: 7, file: 0) 
         case.white:
-            self.position = index == 0 ? Position(rank: 7, file: 7) : Position(rank: 0, file: 7)
+            return index == 0 ? Position(rank: 7, file: 7) : Position(rank: 0, file: 7)
         }
-    }  
+    }
+    
+    func movablePositions(from: Position) -> [Position] {
+        return []
+    }
 }

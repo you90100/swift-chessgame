@@ -22,17 +22,9 @@ struct Pawn: Pieceable {
     }    
     
     var team: Team    
-    var position: Position
     
-    init(team: Team, index: Int) {
+    init(team: Team) {
         self.team = team
-        
-        switch team {
-        case .black:
-            self.position = Position(rank: index, file: 1)
-        case.white:
-            self.position = Position(rank: index, file: 6)
-        }
     }
     
     func movablePositions(from: Position) -> [Position] {
@@ -52,4 +44,12 @@ struct Pawn: Pieceable {
         return positions
     }
 
+    static func initialPosition(team: Team, index: Int) -> Position {
+        switch team {
+        case .black:
+            return Position(rank: index, file: 1)
+        case.white:
+            return Position(rank: index, file: 6)
+        }
+    }
 }
