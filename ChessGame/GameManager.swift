@@ -23,6 +23,6 @@ class GameManager {
     }
     
     func input() {
-        // A1 -> convert -> board.move
+        // A1 -> convert -> board.move 
     }
 }
